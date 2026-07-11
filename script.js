@@ -92,10 +92,10 @@ function activarReproductor(id, tipo) {
     
     if (contenedorRepro && iframeRepro) {
         // Servidor emby de autoembed limpio
-        iframeRepro.src = `https://vidsrc.to/embed/${tipo}/${id}`;
+        iframeRepro.src = `https://vidsrc.su/embed/${tipo}/${id}`; 
         contenedorRepro.style.display = 'block';
         
-        // Hacemos scroll automático hacia el reproductor para ver el video de una vez
+            // Hacemos scroll automático hacia el reproductor para ver el video de una vez
         contenedorRepro.scrollIntoView({ behavior: 'smooth' });
     }
 }

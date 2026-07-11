@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamBox - Tu Plataforma de Streaming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado / Navbar con Buscador -->
+    <header>
+        <div class="logo">STREAMBOX</div>
+        <div class="search-container">
+            <input type="text" id="input-busqueda" placeholder="Buscar películas o series...">
+            <button id="btn-buscar">Buscar</button>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal de Catálogos -->
+    <main>
+        <section class="seccion-bloque">
+            <h2 id="titulo-seccion" class="section-title">Películas Recomendadas</h2>
+            <div id="contenedor-peliculas" class="netflix-row"></div>
+        </section>
+    </main>
+
+    <!-- VENTANA EMERGENTE (MODAL DE DETALLES) -->
+    <div id="modal-detalle" class="modal">
+        <div class="modal-content">
+            
+            <!-- BOTÓN DE ATRÁS -->
+            <button class="back-btn" onclick="cerrarModalDetalle()">← Volver</button>
+            
+            <!-- Banner Superior del Modal -->
+            <div id="modal-banner" class="modal-header-banner">
+                <div class="modal-banner-vignette"></div>
+                <div class="modal-header-actions">
+                    <button id="modal-btn-reproducir" class="btn-modal-play">▶ Reproducir Película</button>
+                </div>
+            </div>
+
+            <!-- CONTENEDOR DEL REPRODUCTOR -->
+            <div id="contenedor-reproductor" style="display: none;">
+                <iframe id="reproductor-video" src="" allowfullscreen></iframe>
+            </div>
+
+            <!-- Información de la obra -->
+            <div class="modal-info">
+                <h2 id="modal-titulo"></h2>
+                <p id="modal-sinopsis"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
